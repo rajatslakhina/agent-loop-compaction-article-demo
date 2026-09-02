@@ -82,7 +82,7 @@ public protocol CompactionStage: Sendable {
 public enum LossClass: Int, Sendable, Comparable, CaseIterable, Codable {
     /// Redundant content collapsed to a pointer. Nothing unique is lost.
     case redundancy = 0
-    /// The tail of verbose output is dropped. Shape and head survive.
+    /// The middle of verbose output is dropped. Head and tail both survive.
     case verbosity = 1
     /// A span is replaced by a structural summary. Detail lost, shape kept.
     case detail = 2
